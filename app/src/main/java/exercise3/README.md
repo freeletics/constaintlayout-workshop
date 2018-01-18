@@ -263,6 +263,7 @@ with different length for similar worlds).
 
 ![barrier example](../../../../../img/barrier-example.gif)
 
+[_constraintlayout.com_](https://constraintlayout.com/basics/barriers.html)
 ## Placeholder
 **_Added in 1.1_**
 
@@ -275,7 +276,9 @@ with different length for similar worlds).
  The content view is positioned using the layout of the parameters of the Placeholder
  (the Placeholder is simply constrained in the layout like any other view).
 
-[![placeholder](../../../../../img/placeholder.gif)](http://androidkt.com/constraintlayout/)
+![placeholder](../../../../../img/placeholder.gif)
+
+[_androidkt.com_](http://androidkt.com/constraintlayout/)
 
 
 ## Circular positioning
