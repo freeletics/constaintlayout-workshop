@@ -122,7 +122,7 @@ space will be distributed among the elements using
 
 ### Using editor
 
-
+![chains editor](../../../../../img/chains-editor.gif)
 
 
 ## Gudielines
