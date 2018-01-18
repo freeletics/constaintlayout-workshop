@@ -276,7 +276,7 @@ with different length for similar worlds).
  The content view is positioned using the layout of the parameters of the Placeholder
  (the Placeholder is simply constrained in the layout like any other view).
 
-![placeholder](../../../../../img/placeholder.gif)
+![placeholder](../../../../../img/Placeholder.gif)
 
 [_androidkt.com_](http://androidkt.com/constraintlayout/)
 
