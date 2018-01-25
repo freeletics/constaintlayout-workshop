@@ -326,11 +326,25 @@ Multiple groups can reference the same widgets -- in that case,
 the XML declaration order will define the final visibility state
 (the group declared last will have the last word).
 
+## Backgrounds and spacers
 
-### TODO
+While working on converting old layouts to Constraint Layout, there's a problem of displaying specific group of content with the background.
+This was usually solved by having nested layouts with backgrounds. Whole point of having ConstraintLayout in place is
+to give a possibility to avoid nesting of layouts.
+
+![](../../../../../img/background-image.png)
+
+One of possible approaches to handle it is to constraint "inner" text to "outside" elements, and then constraining `<View>` with requested background to the text.
+
+Another helpful view element is `<android.support.v4.widget.Space/>`. It could be used when using margin is not possible, or makes layout complicated.
+This view is the element of choise when it comes to solving bugs of ConstraintLayout
+
+
+## TODO
 MATCH_CONSTRAINT dimensions (Added in 1.1)
 When a dimension is set to MATCH_CONSTRAINT, the default behavior is to have the resulting size take all the available space. Several additional modifiers are available:
 
 layout_constraintWidth_min and layout_constraintHeight_min : will set the minimum size for this dimension
 layout_constraintWidth_max and layout_constraintHeight_max : will set the maximum size for this dimension
 layout_constraintWidth_percent and layout_constraintHeight_percent : will set the size of this dimension as a percentage of the parent
+

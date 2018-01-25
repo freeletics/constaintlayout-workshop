@@ -32,31 +32,100 @@ Simplest use case of `delayed transitions` is shown below
 Constraint layout gives a opportunity to adjust whole
 layout of the view by changing only few parameters
 
-####simple constraint layout animation example with video
+```
+ TransitionManager.beginDelayedTransition(ConstraintLayout)
+
+ top.minHeight = 200
+```
+
+```
+  <TextView
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello world!"/>
+
+    <TextView
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        android:text="Hello again"/>
+```
+
+
+![](../../../../../img/simple-animation-constraint.gif)
+
 
 ### Constraint Set
 
-`Constraint Set` allows you to define programmatically
+`Constraint Set` describes
 a set of constraints to be used with ConstraintLayout.
-It lets you create and save constraints,
+It lets you create and save constraints programmatically,
 and apply them to an existing ConstraintLayout.
 ConstraintsSet can be created in various ways:
 
 * Manually
 `c = new ConstraintSet(); c.connect(....);`
-* from a R.layout.* object
+* from a layout file
 `c.clone(context, R.layout.layout1);`
-* from a ConstraintLayout
-`c.clone(clayout);`
+* copying from current ConstraintLayout
+`c.clone(constraintLayout);`
 
-Here are some examples
+For instance:
 
-####layout animation
-####video
+```
+    private var constraintSet1 = ConstraintSet() // create a Constraint Set
+    private var constraintSet2 = ConstraintSet() // create a Constraint Set
+    private var showFirstState = true
+
+    fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.state1)
+        constraintSet2.clone(context, R.layout.state2) // get constraints from layout
+        constraintSet1.clone(constraintLayout) // get constraints from ConstraintSet
+    }
+
+    fun onClick() {
+        TransitionManager.beginDelayedTransition(constraintLayout)
+        showFirstState = !showFirstState
+        if (showFirstState) {
+            constraintSet1.applyTo(constraintLayout) // set new constraints
+        } else {
+            constraintSet2.applyTo(constraintLayout) // set new constraints
+        }
+    }
+```
 
 ### Custom transition, Interpolator
 
-Custom transition and non-linear interpolator could be applied on `delayed transitions` as well
+By default, `TransitionManager` will move and resize along the straight path with the linear interpolation
+To make animation more appealing, custom transition and custom interpolator should be specified.
 
-####example of custom transaction and interpolator
-####video
+```
+  TransitionManager.beginDelayedTransition(layout, ChangeBounds().apply { interpolator = OvershootInterpolator() })
+```
+
+Built-in transitions:
+* `AutoTransition` - Default transition. Fade out, move and resize, and fade in views, in that order.
+* `Fade` - fades in, fades out or does a fade out followed by a fade in
+* `ChangeBounds` - Moves and resizes views.
+
+Built-in interpolators:
+* `AccelerateDecelerateInterpolator()`
+* `AccelerateInterpolator(float factor)`
+* `AnticipateInterpolator(float tension)`
+* `AnticipateOvershootInterpolator(float tension)`
+* `BounceInterpolator()`
+* `CycleInterpolator(float cycles)`
+* `DecelerateInterpolator(float factor)`
+* `LinearInterpolator()`
+* `OvershootInterpolator(float tension)`
+
+![](../../../../../img/interpolators1.gif)
+
+![](../../../../../img/interpolators2.gif)
+
+![](../../../../../img/interpolators3.gif)
+
+[Amanda Hill @ Thoughtbot](https://robots.thoughtbot.com/android-interpolators-a-visual-guide)
