@@ -112,15 +112,6 @@ Built-in transitions:
 * `ChangeBounds` - Moves and resizes views.
 
 Built-in interpolators:
-* `AccelerateDecelerateInterpolator()`
-* `AccelerateInterpolator(float factor)`
-* `AnticipateInterpolator(float tension)`
-* `AnticipateOvershootInterpolator(float tension)`
-* `BounceInterpolator()`
-* `CycleInterpolator(float cycles)`
-* `DecelerateInterpolator(float factor)`
-* `LinearInterpolator()`
-* `OvershootInterpolator(float tension)`
 
 ![](../../../../../img/interpolators1.gif)
 
