@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ConstraintLayoutWorkshop.iml" filepath="$PROJECT_DIR$/ConstraintLayoutWorkshop.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/constaintlayout-workshop.iml" filepath="$PROJECT_DIR$/constaintlayout-workshop.iml" />
     </modules>
   </component>
 </project>
