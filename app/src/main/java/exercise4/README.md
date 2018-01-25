@@ -97,6 +97,8 @@ For instance:
     }
 ```
 
+#### **There's no need to define style of views, if layout will only be used for initializing `ConstraintSet`.  Only layout-related parameters will be taken: `width`, `height`, `visibility`, `constraints` etc**
+
 ### Custom transition, Interpolator
 
 By default, `TransitionManager` will move and resize along the straight path with the linear interpolation
