@@ -13,3 +13,6 @@ Then set the layout_constraintWidth_percent or layout_constraintHeight_percent a
 * What happens on VIEW_GONE (there are also some features like:  layout_goneMarginTop that might be worthwhile mentioning)
 
 * Ratio
+
+
+![centering position](../../../../../img/ex2.png)
