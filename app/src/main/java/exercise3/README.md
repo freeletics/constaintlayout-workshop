@@ -340,11 +340,11 @@ Another helpful view element is `<android.support.v4.widget.Space/>`. It could b
 This view is the element of choise when it comes to solving bugs of ConstraintLayout
 
 
-## TODO
+## MATCH_CONSTRAINT
 MATCH_CONSTRAINT dimensions (Added in 1.1)
 When a dimension is set to MATCH_CONSTRAINT, the default behavior is to have the resulting size take all the available space. Several additional modifiers are available:
 
-layout_constraintWidth_min and layout_constraintHeight_min : will set the minimum size for this dimension
-layout_constraintWidth_max and layout_constraintHeight_max : will set the maximum size for this dimension
-layout_constraintWidth_percent and layout_constraintHeight_percent : will set the size of this dimension as a percentage of the parent
+* `layout_constraintWidth_min` and `layout_constraintHeight_min` : will set the minimum size for this dimension
+* `layout_constraintWidth_max` and `layout_constraintHeight_max` : will set the maximum size for this dimension
+* `layout_constraintWidth_percent` and `layout_constraintHeight_percent` : will set the size of this dimension as a percentage of the parent
 
