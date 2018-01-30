@@ -15,4 +15,4 @@ Then set the layout_constraintWidth_percent or layout_constraintHeight_percent a
 * Ratio
 
 
-![centering position](../../../../../img/ex2.png)
+![EXERCISE 2](../../../../../img/ex2.png)
