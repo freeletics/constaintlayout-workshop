@@ -10,12 +10,20 @@
         android:id="@+id/star"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
         tools:src="@drawable/ic_icon_star" />
 
     <ImageView
         android:id="@+id/medal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintCircle="@+id/star"
+        app:layout_constraintCircleAngle="240"
+        app:layout_constraintCircleRadius="@dimen/radius"
         tools:src="@drawable/ic_icon_bestlist" />
 
 
@@ -23,12 +31,18 @@
         android:id="@+id/clapclap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintCircle="@+id/star"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="@dimen/radius"
         tools:src="@drawable/ic_icon_clapclap" />
 
     <ImageView
         android:id="@+id/completed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintCircle="@+id/star"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="@dimen/radius"
         tools:src="@drawable/ic_icon_completed" />
 
 
@@ -36,17 +50,33 @@
         android:id="@+id/ghost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/location"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
         tools:src="@drawable/ic_icon_ghost" />
 
     <ImageView
         android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/comment"
+        app:layout_constraintStart_toEndOf="@+id/ghost"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
         tools:src="@drawable/ic_icon_location" />
 
     <ImageView
         android:id="@+id/comment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
         tools:src="@drawable/ic_icon_comment" />
 </android.support.constraint.ConstraintLayout>

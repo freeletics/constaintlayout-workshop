@@ -3,8 +3,10 @@ package exercise4
 import android.os.Bundle
 import android.support.constraint.ConstraintSet
 import android.support.v7.app.AppCompatActivity
+import android.transition.ChangeBounds
 import android.transition.Transition
 import android.transition.TransitionManager
+import android.view.animation.OvershootInterpolator
 import com.freeletics.constraintlayoutworkshop.R
 import kotlinx.android.synthetic.main.exercise_4.*
 
@@ -32,14 +34,17 @@ class ExerciseFour : AppCompatActivity() {
         }
     }
 
+
     private fun initializeConstraintSets() {
-        //TODO: define constraints sets here
+        set2.clone(this, R.layout.exercise_4_1)
+        set1.clone(layout)
     }
 
 
     private fun createTransition(): Transition? {
-        //TODO: define transition here
-        return null
+        return ChangeBounds().apply {
+            interpolator = OvershootInterpolator()
+        }
     }
 
 }
