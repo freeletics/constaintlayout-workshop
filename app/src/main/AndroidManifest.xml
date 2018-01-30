@@ -9,28 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="exercise1.ExerciseOne">
+        <activity android:name="exercise1.ExerciseOne" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="exercise2.ExerciseTwo">
+        <activity android:name="exercise2.ExerciseTwo" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="exercise3.ExerciseThree">
+        <activity android:name="exercise3.ExerciseThree" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="exercise4.ExerciseFour">
+        <activity android:name="exercise4.ExerciseFour" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
